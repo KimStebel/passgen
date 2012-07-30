@@ -123,7 +123,7 @@ object Main {
     val hashPart = hash.take(constraints.maxLength)
     val ac = constraints.allowedCharacters
     hashPart.map(byt => {
-      constraints.allowedCharacters(byt.toInt.abs % ac.size)
+      constraints.allowedCharacters((byt.toInt + 128) % ac.size)
     }).foldLeft("")(_+_)
   }
   
