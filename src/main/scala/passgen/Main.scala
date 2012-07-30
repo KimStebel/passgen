@@ -1,0 +1,7 @@
+package passgen
+
+object Main {
+  def main(args:Array[String]) {
+    
+  }
+}
